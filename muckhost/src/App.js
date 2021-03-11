@@ -2,6 +2,8 @@ import React from "react";
 import Menu from "./Menu";
 import Info from "./Pages/Info";
 import Map from "./Pages/Map";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 function App() {
   return (
     <Router>

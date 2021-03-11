@@ -12,4 +12,4 @@ function Map() {
   );
 }
 
-export default Info;
+export default Map;

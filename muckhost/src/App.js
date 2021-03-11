@@ -2,6 +2,8 @@ import React from "react";
 import Menu from "./Menu";
 import Info from "./Pages/Info";
 import Map from "./Pages/Map";
+import Jelentkezes from "./Pages/Jelentkezes";
+import Main from "./Pages/Main";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
@@ -19,15 +21,15 @@ function App() {
             <Route path="/info">
               <Info />
             </Route>
-            <Route path="/gyik">
+            {/* <Route path="/gyik">
               <Gyik />
-            </Route>
+            </Route> */}
             <Route path="/map">
               <Map />
             </Route>
-            {/* <Route path="/jelentkezes">
+            <Route path="/jelentkezes">
               <Jelentkezes />
-            </Route> */}
+            </Route>
             <Route path="/">
               <Main />
             </Route>

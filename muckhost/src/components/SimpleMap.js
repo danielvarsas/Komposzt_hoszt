@@ -4,8 +4,8 @@ import GoogleMapReact from "google-map-react";
 const AnyReactComponent = ({ text }) => (
   <div
     style={{
-      color: "white",
-      background: "grey",
+      color: "black",
+      background: "lightgreen",
       padding: "15px 10px",
       display: "inline-flex",
       textAlign: "center",
@@ -22,20 +22,18 @@ const AnyReactComponent = ({ text }) => (
 class SimpleMap extends React.Component {
   static defaultProps = {
     center: { lat: 46.25, lng: 20.15 },
-    zoom: 11,
+    zoom: 13,
   };
 
   render() {
+    const MapApi = "AIzaSyC-ElJ4eqtnKX5ufH3OXSgCeolthMzqJuw";
     return (
       <GoogleMapReact
+        //bootstrapURLKeys={{ key: MapApi }}
         defaultCenter={this.props.center}
         defaultZoom={this.props.zoom}
       >
-        <AnyReactComponent
-          lat={59.955413}
-          lng={30.337844}
-          text={"Kreyser Avrora"}
-        />
+        <AnyReactComponent lat={46.25} lng={20.15} text={"Hello Map"} />
       </GoogleMapReact>
     );
   }

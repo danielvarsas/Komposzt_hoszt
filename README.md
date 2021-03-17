@@ -2,9 +2,11 @@
 
 Creating map with google-maő-react npm package
 
-## Available Scripts
+## In progress
 
-In the project directory, you can run:
+-Functioning filtering
+-Dropdown components in map
+-Backend (SpringBoot Java + MySql)
+-Connect map with backend
 
-### `npm start`
 

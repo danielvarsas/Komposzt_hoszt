@@ -4,7 +4,7 @@ import Filter from "../components/Filter";
 
 function Map() {
   return (
-    <div className="flex-container">
+    <div className="flex-container justify-content:end">
       <div style={{ height: "95vh", width: "60vh" }}>
         <Filter />
       </div>

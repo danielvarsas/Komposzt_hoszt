@@ -5,7 +5,7 @@ function Filter() {
   return (
     <form>
       <div>
-        <h2>Város</h2>
+        <h4>Város</h4>
         <select
           //value={status}
           className="btn border-dark"
@@ -17,7 +17,7 @@ function Filter() {
         </select>
       </div>
       <div>
-        <h2>Irányítószám</h2>
+        <h4>Irányítószám</h4>
         <select
           //value={status}
           className="btn border-dark"
@@ -51,7 +51,7 @@ function Filter() {
           checked
         />
         <label class="form-check-label" for="exampleRadios1">
-          Lakossági
+          Közösségi
         </label>
       </div>
     </form>

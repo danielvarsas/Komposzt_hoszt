@@ -1,6 +1,6 @@
 # Map page for komposzthoszt.hu
 
-Creating map with google-maő-react npm package
+Creating map with google-map-react npm package
 
 ## In progress
 

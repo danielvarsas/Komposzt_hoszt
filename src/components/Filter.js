@@ -7,11 +7,12 @@ function Filter() {
   const [type, setType] = useState("all");
   const [isAccepting, toggleIsAccepting] = useToggle();
 
-  let centerpoz = { lat: 46.25, lng: 20.15 };
+  //let centerpoz = { lat: 46.25, lng: 20.15 };
 
   function useToggle(initialValue = false) {
     return useReducer((state) => !state, initialValue);
   }
+
   console.log(isAccepting);
 
   return (
@@ -129,4 +130,4 @@ function Filter() {
   );
 }
 
-export default { Filter, centerpoz };
+export default Filter;

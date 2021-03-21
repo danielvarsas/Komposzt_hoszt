@@ -7,23 +7,12 @@ function Filter() {
   const [type, setType] = useState("all");
   const [isAccepting, toggleIsAccepting] = useToggle();
 
-  // function handleToggle() {
-  //   setIsAccepting(!isAccepting);
-  //   console.log(isAccepting);
-  // }
+  let centerpoz = { lat: 46.25, lng: 20.15 };
 
   function useToggle(initialValue = false) {
-    // Returns the tuple [state, dispatch]
-    // Normally with useReducer you pass a value to dispatch to indicate what action to
-    // take on the state, but in this case there's only one action.
     return useReducer((state) => !state, initialValue);
   }
   console.log(isAccepting);
-
-  // const cities = [
-  //   { label: "Szeged", value: "szeged" },
-  //   { label: "Budapest", value: "bp" },
-  // ];
 
   return (
     <div className="d-flex flex-column">
@@ -123,14 +112,14 @@ function Filter() {
           </div>
         </form>
       </div>
-      <div>
+      <div className="text-left">
         <br />
         <br />
         <br />
         (Ez a rész csak a fejlesztés idejére látszik) <br />
         Backendre továbbítandó:
         <br />
-        Város:{city} <br />
+        Város: {city} <br />
         Ir.szám.: {zip} <br />
         Jelleg.: {type} <br />
         Fogad-e.: {isAccepting === true ? "true" : "false"}
@@ -140,4 +129,4 @@ function Filter() {
   );
 }
 
-export default Filter;
+export default { Filter, centerpoz };

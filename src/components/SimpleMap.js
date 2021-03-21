@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import GoogleMapReact from "google-map-react";
 import Card from "./Card";
+import { centerpoz } from "./Filter";
 
 let person1name = "Garabolyos";
 let person1addr = "Some street 123\n";
@@ -16,7 +17,7 @@ let person3info = "Only BIO please";
 
 class SimpleMap extends React.Component {
   static defaultProps = {
-    center: { lat: 46.25, lng: 20.15 },
+    center: centerpoz,
     zoom: 13,
   };
 

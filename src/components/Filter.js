@@ -1,12 +1,24 @@
-import React, { useState } from "react";
-import useToggle from "react-use-toggle";
+import React, { useState, useReducer } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Filter() {
   const [city, setCity] = useState("szeged");
   const [zip, setZip] = useState("");
   const [type, setType] = useState("all");
-  const [isAccepting, setIsAccepting] = useState();
+  const [isAccepting, toggleIsAccepting] = useToggle();
+
+  // function handleToggle() {
+  //   setIsAccepting(!isAccepting);
+  //   console.log(isAccepting);
+  // }
+
+  function useToggle(initialValue = false) {
+    // Returns the tuple [state, dispatch]
+    // Normally with useReducer you pass a value to dispatch to indicate what action to
+    // take on the state, but in this case there's only one action.
+    return useReducer((state) => !state, initialValue);
+  }
+  console.log(isAccepting);
 
   // const cities = [
   //   { label: "Szeged", value: "szeged" },
@@ -97,20 +109,18 @@ function Filter() {
             </label>
           </div>
           <br />
-          {/* <div className="form-check">
+          <div className="form-check">
             <h4>Jelenleg fogad-e?</h4>
             <input
               type="checkbox"
               class="form-check-input"
               id="isAccepting"
-              onChange={
-                !{ isAccepting } ? setIsAccepting(true) : setIsAccepting(false)
-              }
+              onChange={toggleIsAccepting}
             />
             <label class="form-check-label" for="isAccepting">
               Jelenleg fogad
             </label>
-          </div> */}
+          </div>
         </form>
       </div>
       <div>
@@ -123,7 +133,8 @@ function Filter() {
         Város:{city} <br />
         Ir.szám.: {zip} <br />
         Jelleg.: {type} <br />
-        Fogad-e.: {isAccepting} <br />
+        Fogad-e.: {isAccepting === true ? "true" : "false"}
+        <br />
       </div>
     </div>
   );

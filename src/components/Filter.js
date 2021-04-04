@@ -1,13 +1,13 @@
 import React, { useState, useReducer } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function Filter() {
-  const [city, setCity] = useState("szeged");
+function Filter(props) {
+  //const [city, setCity] = useState("szeged");
   const [zip, setZip] = useState("");
   const [type, setType] = useState("all");
   const [isAccepting, toggleIsAccepting] = useToggle();
 
-  //let centerpoz = { lat: 46.25, lng: 20.15 };
+  let centerpoz = { lat: 46.25, lng: 20.15 };
 
   function useToggle(initialValue = false) {
     return useReducer((state) => !state, initialValue);
@@ -22,27 +22,45 @@ function Filter() {
           <div>
             <h4>Város</h4>
             <select
-              value={city}
+              //value={city}
               className="btn border-dark"
-              onChange={(e) => setCity(e.target.value)}
+              onChange={(event) => props.onChange(event.target.value)}
               name="filterWorkSheetByStatus"
             >
-              <option value="szeged">Szeged</option>
-              <option value="budapest">Budapest</option>
+              <option value="szeged" data-reference="szeged">
+                Szeged
+              </option>
+              <option value="budapest" data-reference="budapest">
+                Budapest
+              </option>
             </select>
           </div>
           <br />
           <div>
             <h4>Irányítószám</h4>
-            <select
-              value={zip}
-              className="btn border-dark"
-              onChange={(e) => setZip(e.target.value)}
-              name="filterWorkSheetByStatus"
-            >
-              <option>6765</option>
-              <option>6978</option>
-            </select>
+            {props.city === "szeged" ? (
+              <select
+                value={zip}
+                className="btn border-dark"
+                onChange={(e) => setZip(e.target.value)}
+                name="filterWorkSheetByStatus"
+              >
+                {/* Szeged */}
+                <option data-belongsto="szeged">6765</option>
+                <option data-belongsto="szeged">6978</option>
+              </select>
+            ) : (
+              <select
+                value={zip}
+                className="btn border-dark"
+                onChange={(e) => setZip(e.target.value)}
+                name="filterWorkSheetByStatus"
+              >
+                {/* Budapest */}
+                <option data-belongsto="budapest">1011</option>
+                <option data-belongsto="budapest">1021</option>
+              </select>
+            )}
           </div>
           <br />
           <div className="form-check">
@@ -120,7 +138,7 @@ function Filter() {
         (Ez a rész csak a fejlesztés idejére látszik) <br />
         Backendre továbbítandó:
         <br />
-        Város: {city} <br />
+        Város: {props.city} <br />
         Ir.szám.: {zip} <br />
         Jelleg.: {type} <br />
         Fogad-e.: {isAccepting === true ? "true" : "false"}

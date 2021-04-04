@@ -12,14 +12,12 @@ function Card(props) {
   }
 
   return (
-    <div className="flex-column" id="login-container">
+    <>
       <div
-        onClick={setVisible}
-        className={`${
-          type === "priv" ? "profile-img" : "profile-img-store"
-        } flex`}
-      ></div>
-      <div className={`${!visible ? "nonevisible" : ""}`}>
+        className="flex-column"
+        id="login-container"
+        style={{ display: visible ? "block" : "none" }}
+      >
         <h5>{props.name}</h5>
         <div class="description">
           {props.address}
@@ -31,7 +29,13 @@ function Card(props) {
           <Telephone size={30} />
         </div>
       </div>
-    </div>
+      <div
+        onClick={setVisible}
+        className={`${
+          type === "priv" ? "profile-img" : "profile-img-store"
+        } flex`}
+      ></div>
+    </>
   );
 }
 

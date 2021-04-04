@@ -9,14 +9,17 @@ const MapApi = "AIzaSyC-ElJ4eqtnKX5ufH3OXSgCeolthMzqJuw";
 let person1name = "Garabolyos";
 let person1addr = "Some street 123\n";
 let person1info = "Only krumplihéj";
+let type1 = "busi";
 
 let person2name = "Kovács István";
 let person2addr = "Neverending sqr 3\n";
 let person2info = "Only weekends";
+let type2 = "busi";
 
 let person3name = "Teszt Elek";
 let person3addr = "Short str 523258\n";
 let person3info = "Only BIO please";
+let type3 = "priv";
 
 //BUDAPEST
 let person4name = "Ne Pazarolj";
@@ -89,6 +92,7 @@ function SimpleMap(props) {
           name={person1name}
           address={person1addr}
           info={person1info}
+          type={type1}
         />
         <Card
           lat={46.25631278974291}
@@ -96,6 +100,7 @@ function SimpleMap(props) {
           name={person2name}
           address={person2addr}
           info={person2info}
+          type={type2}
         />
         <Card
           lat={46.26409319220389}
@@ -103,6 +108,7 @@ function SimpleMap(props) {
           name={person3name}
           address={person3addr}
           info={person3info}
+          type={type3}
         />
         {/* BUDAPEST */}
         <Card

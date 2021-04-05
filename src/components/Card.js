@@ -1,7 +1,7 @@
 import React, { Fragment, useReducer } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Card.css";
-import { Facebook, Telephone } from "react-bootstrap-icons";
+import { Facebook, Telephone, ChatLeftDots } from "react-bootstrap-icons";
 
 function Card(props) {
   const { name, address, info, type } = props;
@@ -25,7 +25,7 @@ function Card(props) {
           {props.info}
         </div>
         <div className="social flex">
-          <Facebook size={30} />
+          <ChatLeftDots size={30} />
           <Telephone size={30} />
         </div>
       </div>

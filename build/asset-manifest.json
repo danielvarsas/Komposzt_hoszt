@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Komposzt_hoszt/static/css/main.879eb456.chunk.css",
+    "main.js": "/Komposzt_hoszt/static/js/main.3759023c.chunk.js",
+    "main.js.map": "/Komposzt_hoszt/static/js/main.3759023c.chunk.js.map",
+    "runtime-main.js": "/Komposzt_hoszt/static/js/runtime-main.b2772dcf.js",
+    "runtime-main.js.map": "/Komposzt_hoszt/static/js/runtime-main.b2772dcf.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/Komposzt_hoszt/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.47898ffc.chunk.js": "/Komposzt_hoszt/static/js/2.47898ffc.chunk.js",
+    "static/js/2.47898ffc.chunk.js.map": "/Komposzt_hoszt/static/js/2.47898ffc.chunk.js.map",
+    "static/js/3.44b7b556.chunk.js": "/Komposzt_hoszt/static/js/3.44b7b556.chunk.js",
+    "static/js/3.44b7b556.chunk.js.map": "/Komposzt_hoszt/static/js/3.44b7b556.chunk.js.map",
+    "index.html": "/Komposzt_hoszt/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/Komposzt_hoszt/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.879eb456.chunk.css.map": "/Komposzt_hoszt/static/css/main.879eb456.chunk.css.map",
+    "static/js/2.47898ffc.chunk.js.LICENSE.txt": "/Komposzt_hoszt/static/js/2.47898ffc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b2772dcf.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.47898ffc.chunk.js",
+    "static/css/main.879eb456.chunk.css",
+    "static/js/main.3759023c.chunk.js"
+  ]
+}
